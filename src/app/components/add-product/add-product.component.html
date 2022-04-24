@@ -1,0 +1,12 @@
+<div class="px-5 col-12" style="margin-top: 5rem; color:black;">
+    <h1 class="mx-auto text-center mb-5">Add</h1>
+    <form class="col-4 mx-auto mt-5" action="" (ngSubmit)="onSubmit()">
+        <input type="number" placeholder="id" name="id" id="id" style="border: 1px solid rgba(15, 14, 14, 0.667);" class="my-3 bg-transparent rounded p-2 col-12 d-block " [(ngModel)]="product.id" />
+        <input type="text" placeholder="name" name="name" id="name" style="border: 1px solid rgba(0, 0, 0, 0.667);" class="my-3 bg-transparent rounded p-2 col-12 d-block " [(ngModel)]="product.name" />
+        <input type="text" placeholder="description" name="description" id="description" style="border: 1px solid rgba(7, 7, 7, 0.667);" class="my-3 bg-transparent rounded p-2 col-12 d-block " [(ngModel)]="product.description" />
+        <input type="number" placeholder="price " name="price " id="price " style="border: 1px solid rgba(0, 0, 0, 0.667);" class="my-3 bg-transparent rounded p-2 col-12 d-block " [(ngModel)]="product.price " />
+        <input type="date" placeholder="addedOn" name="addedOn" id="addedOn" style="border: 1px solid rgba(15, 14, 14, 0.667);" class="my-3 bg-transparent rounded p-2 col-12 d-block " [(ngModel)]="product.addedOn" />
+        <input type="url" placeholder="imageUrl" name="imageUrl" id="imageUrl" style="border: 1px solid rgba(8, 8, 8, 0.667);" class="my-3 bg-transparent rounded p-2 col-12 d-block" [(ngModel)]="product.imageUrl" />
+        <button class="btn btn-success" type="submit" style=" padding: 10px 20px; ">submit</button>
+    </form>
+</div>

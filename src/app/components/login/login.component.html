@@ -1,0 +1,9 @@
+<div class="px-5 col-12" style="margin-top: 5rem;">
+    <h1 class="mx-auto text-center mb-5" style="color:black">Login</h1>
+    <form class="col-4 mx-auto mt-5" style="color:black" action="" (submit)="logIn()">
+        <input type="text" placeholder="Username" name="username" id="username" style="border: 1px solid rgba(7, 6, 6, 0.667);" class="my-3 bg-transparent rounded p-2 col-12 d-block " [(ngModel)]="username" />
+        <input type="password" placeholder="Password" name="password" id="password" style="border: 1px solid rgba(7, 6, 6, 0.667);" class="my-3 bg-transparent rounded p-2 col-12 d-block " [(ngModel)]="password" />
+        <input type="submit" value="Log in" style="border: 1px solid rgba(7, 6, 6, 0.667);" class="mt-5 rounded col-2 d-block btn btn-primary" />
+        <h4 *ngIf="error" style="text-align: center;" class="alert-danger p-2 m-5 rounded">{{error}}</h4>
+    </form>
+</div>

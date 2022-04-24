@@ -1,0 +1,46 @@
+<div>
+    <style>
+        * {
+            color: white;
+        }
+        
+        nav {
+            box-shadow: 5px 5px 20px rgb(216, 128, 12);
+            background-color: rgb(216, 128, 12);
+        }
+    </style>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-red col-12 px-5 mb-5 fixed-top " style="background-color:rgb(216, 128, 12)">
+            <a class="navbar-brand" style="font-weight: 900; " routerLink="home"><i class="fa fa-soccer-ball-o w3-margin-right "></i>Le Sportif</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" style="flex-grow: 1;">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="shop">Store</a>
+                    </li>
+                    <li *ngIf="!isTokenThere" class="nav-item">
+                        <a class="nav-link" routerLink="register">Register</a>
+                    </li>
+                    <li *ngIf="!isTokenThere" class="nav-item">
+                        <a class="nav-link" routerLink="login">Login <i class="fa fa-sign-out w3-margin-right "></i></a>
+                    </li>
+                    <li *ngIf="isTokenThere" class="nav-item">
+                        <a class="nav-link" routerLink="account"><i class="fas fa-user"></i> Account</a>
+                    </li>
+                    <li *ngIf="isTokenThere" class="nav-item">
+                        <a class="nav-link" routerLink="cart">Cart</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 d-flex" (submit)="search()">
+                    <input class="form-control mr-sm-2 bg-transparent text-success" type="search" placeholder="Search products" aria-label="Search" [(ngModel)]="term" name="term">
+                    <button class="btn btn-outline-success my-2 my-sm-0 mx-3" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </nav>
+        <router-outlet></router-outlet>
+    </body>
+</div>
